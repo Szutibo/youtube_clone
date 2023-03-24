@@ -10,7 +10,6 @@ const Feed = () => {
   useEffect(() => {
     fetchFromApi(`search?part=snippet&q=${selectedCategory}`)
       .then((data) => setVideos(data.items));
-      console.log(process.env.REACT_APP_RAPID_API_KEY);
   }, [selectedCategory]);
 
   return (
